@@ -38,12 +38,26 @@ function checkDOI(){
     }
 }).done(function(data){
     console.log(data);
+    var textinput = jQuery("<input>").is("[type=text]");
+    textinput.each(function (){
+       foreach (var att in data){
+        if (match(jQuery(this), att) {
+            console.log("found "+att);
+            fillContent(jQuery(this), data[att]);
+        }
+    });
   });
-  
-  // call DOI API to get JSON
-  // get all inputs 
-  // go through
-  // go through each attribute of DOI
-  // check if matching (might need to also get the labels before...
-  // might need string similarity function... 
+}
+
+var synonyms = {
+   author: ["authors", "author list", "authors lists"]
+}
+
+function match(el, attr){
+  var name = el.attr(name);
+  if (attr==name) return true;
+  if (synonyms[attr])
+    foreach(var i in synonyms[attr]){
+      if (synonyms[attr][i]==name) return true;
+    }
 }
