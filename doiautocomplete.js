@@ -45,6 +45,7 @@ function checkDOI(){
             console.log("found "+att);
             fillContent(jQuery(this), data[att]);
         }
+       }
     });
   });
 }
