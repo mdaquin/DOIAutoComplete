@@ -22,7 +22,11 @@ function createDialog(){
   document.getElementsByTagName('body')[0].appendChild(div);
 }
 
-// display dialog 
-// on change click on the button 
-//    get the DOI from API
-//    check matching on each attribute to each input. Change value of input if matched.
+function checkDOI(){
+  // call DOI API to get JSON
+  // get all inputs 
+  // go through
+  // go through each attribute of DOI
+  // check if matching (might need to also get the labels before...
+  // might need string similarity function... 
+}
