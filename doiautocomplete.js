@@ -38,9 +38,9 @@ function checkDOI(){
     }
 }).done(function(data){
     console.log(data);
-    var textinput = jQuery("<input>").is("[type=text]");
+    var textinput = jQuery("input").is(":text");
     console.log(textinput);
-    textinput.foreach(function (){
+    textinput.each(function (){
        for(var att in data){
         if (match(jQuery(this), att)) {
             console.log("found "+att);
