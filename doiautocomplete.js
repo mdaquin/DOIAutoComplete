@@ -14,10 +14,10 @@ createDialog();
 function createDialog(){
   var div = document.createElement('div');
   div.id = "DOIAC_DIALOG";
-  div.style = "position: fixed; top: 200px; left: 20%; width: 60%; background: red; height: 30px; border-radius: 15px;";
-  var st = '<span style="font-weight: bold; color: black; width: 19%;">DOI:</span> '+ 
-        '<input name="DOIAC_DOI_INPUT" id="DOIAC_DOI_INPUT" style="width: 60%" placeholder="copy-paste the DOI of your paper here" />'+ 
-        '<a href="javascript:checkDOI();" style="padding: 10px 10px 10px 10px; background: green; width: 19%; border-radius: 10px">Submit</a>';
+  div.style = "position: fixed; top: 200px; left: 20%; width: 60%; background: red; border-radius: 15px;";
+  var st = '<span style="margin-top: 10px; margin-bottom: 10px; margin-left: 10px; font-weight: bold; color: black; width: 19%;">DOI:</span> '+ 
+        '<input name="DOIAC_DOI_INPUT" id="DOIAC_DOI_INPUT" style="margin-top: 10px; margin-bottom: 10px; margin-left: 10px; width: 60%" placeholder="copy-paste the DOI of your paper here" />'+ 
+        '<a href="javascript:checkDOI();" style="margin-top: 10px; margin-bottom: 10px; margin-left: 10px; padding: 10px 10px 10px 10px; background: green; width: 19%; border-radius: 10px; color: white;">Submit</a>';
   div.innerHTML=st;
   document.getElementsByTagName('body')[0].appendChild(div);
 }
