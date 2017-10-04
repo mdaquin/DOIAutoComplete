@@ -38,6 +38,7 @@ function checkDOI(){
     }
 }).done(function(data){
     alert(data);
+    alert(JSON.stringify(data));
   });
   
   // call DOI API to get JSON
