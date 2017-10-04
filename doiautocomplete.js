@@ -30,8 +30,8 @@ function checkDOI(){
   alert(DOI);
   // check if the https or the doi.org or the slash are already there.
   var url = 'https://doi.org/'+DOI;
-  $.ajax({
-    url: url
+  jQuery.ajax({
+    url: url,
     dataType: 'json',
     accepts: {
         json: 'application/json'
