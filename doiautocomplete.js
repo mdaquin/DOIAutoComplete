@@ -40,7 +40,7 @@ function checkDOI(){
     console.log(data);
     var textinput = jQuery("<input>").is("[type=text]");
     textinput.each(function (){
-       foreach (var att in data){
+       for(var att in data){
         if (match(jQuery(this), att) {
             console.log("found "+att);
             fillContent(jQuery(this), data[att]);
@@ -57,7 +57,7 @@ function match(el, attr){
   var name = el.attr(name);
   if (attr==name) return true;
   if (synonyms[attr])
-    foreach(var i in synonyms[attr]){
+    for(var i in synonyms[attr]){
       if (synonyms[attr][i]==name) return true;
     }
 }
