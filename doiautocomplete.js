@@ -38,15 +38,16 @@ function checkDOI(){
     }
 }).done(function(data){
     console.log(data);
-    var textinput = jQuery("input").is(":text");
+    var textinput = jQuery("input");
     console.log(textinput);
     textinput.each(function (){
-       for(var att in data){
-        if (match(jQuery(this), att)) {
+       if ($(this).is(":text"))
+         for(var att in data){
+          if (match(jQuery(this), att)) {
             console.log("found "+att);
             fillContent(jQuery(this), data[att]);
-        }
-       }
+          }
+         }
     });
   });
 }
