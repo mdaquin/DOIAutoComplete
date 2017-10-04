@@ -15,7 +15,7 @@ createDialog();
 function createDialog(){
   var div = document.createElement('div');
   div.id = "DOIAC_DIALOG";
-  div.style = "position: fixed; top: 200px; left: 20%; width: 60%; background: red; border-radius: 15px;";
+  div.style = "position: fixed; top: 200px; left: 20%; width: 60%; background: red; border-radius: 15px; padding-top: 10px; padding-bottom: 10px;";
   var st = '<span style="margin-top: 10px; margin-bottom: 10px; margin-left: 10px; font-weight: bold; color: black; width: 19%;">DOI:</span> '+ 
         '<input name="DOIAC_DOI_INPUT" id="DOIAC_DOI_INPUT" style="margin-top: 10px; margin-bottom: 10px; margin-left: 10px; width: 60%" placeholder="copy-paste the DOI of your paper here" />'+ 
         '<a href="javascript:checkDOI();" style="margin-top: 10px; margin-bottom: 10px; margin-left: 10px; padding: 10px 10px 10px 10px; background: green; width: 19%; border-radius: 10px; color: white;">Submit</a>';
