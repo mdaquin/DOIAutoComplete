@@ -54,10 +54,14 @@ var synonyms = {
 }
 
 function match(el, attr){
-  var name = el.attr(name);
-  if (attr==name) return true;
+  var name = el.attr(name).toLowercase();
+  var lattr = attr.toLowercase();
+  var label = el.prev().text().toLowercase();
+  if (lattr==name) return true;
+  if (lattr==label) return true;  
   if (synonyms[attr])
     for(var i in synonyms[attr]){
-      if (synonyms[attr][i]==name) return true;
+      if (synonyms[attr][i]==name) return true
+      if (synonyms[attr][i]==label) return true;
     }
 }
