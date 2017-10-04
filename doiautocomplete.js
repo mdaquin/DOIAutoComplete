@@ -1,5 +1,5 @@
 
-
+// add jquery if not there
 if (typeof $ == 'undefined') {
   var script = document.createElement('script');
   script.type = "text/javascript";
@@ -10,3 +10,6 @@ if (typeof $ == 'undefined') {
 }
 
 // display dialog 
+// on change click on the button 
+//    get the DOI from API
+//    check matching on each attribute to each input. Change value of input if matched.
