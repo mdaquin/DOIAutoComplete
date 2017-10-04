@@ -28,6 +28,18 @@ function checkDOI(){
   document.getElementById('DOIAC_DIALOG').style='visibility: hidden';
   var DOI = document.getElementById('DOIAC_DOI_INPUT').value;
   alert(DOI);
+  // check if the https or the doi.org or the slash are already there.
+  var url = 'https://doi.org/'+DOI;
+  $.ajax({
+    url: url
+    dataType: 'json',
+    accepts: {
+        json: 'application/json'
+    }
+}).done(function(data){
+    alert(data);
+  });
+  
   // call DOI API to get JSON
   // get all inputs 
   // go through
