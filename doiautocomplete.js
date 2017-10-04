@@ -9,6 +9,15 @@ if (typeof jQuery == 'undefined') {
   document.getElementsByTagName('head')[0].appendChild(script);
 }
 
+createDialog();
+
+function createDialog(){
+  var div = document.createElement('div');
+  div.id = "DOIAC_DIALOG";
+  div.style = "position: fixed; top: 200px; left: 20%; width: 60%; background: red; height: 30px; border-radius: 15px;" 
+  document.getElementsByTagName('body')[0].appendChild(div);
+}
+
 // display dialog 
 // on change click on the button 
 //    get the DOI from API
