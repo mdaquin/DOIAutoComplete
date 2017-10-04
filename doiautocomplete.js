@@ -1,13 +1,13 @@
 
-// add jquery if not there // not necessary, i.e. we could remove dependency to jQuery
-//if (typeof jQuery == 'undefined') {
-//  var script = document.createElement('script');
-//  script.type = "text/javascript";
-//  script.src = "https://code.jquery.com/jquery-3.2.1.min.js";
-//  // script.integrity = "sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=";
-//  script.crossorigin="anonymous" 
-//  document.getElementsByTagName('head')[0].appendChild(script);
-// }
+// add jquery if not there - should aim at making unnecessary (mostly ajax call now)
+if (typeof jQuery == 'undefined') {
+  var script = document.createElement('script');
+  script.type = "text/javascript";
+  script.src = "https://code.jquery.com/jquery-3.2.1.min.js";
+  // script.integrity = "sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=";
+  script.crossorigin="anonymous" 
+  document.getElementsByTagName('head')[0].appendChild(script);
+}
 
 // show dialog
 createDialog();
@@ -26,6 +26,8 @@ function createDialog(){
 // process DOI and auto-fill input fields
 function checkDOI(){
   document.getElementById('DOIAC_DIALOG').style='visibility: hidden';
+  var DOI = document.getElementById('DOIAC_DOI_INPUT').value;
+  alert(DOI);
   // call DOI API to get JSON
   // get all inputs 
   // go through
