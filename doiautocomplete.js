@@ -65,3 +65,14 @@ function match(el, attr){
       if (synonyms[attr][i]==label) return true;
     }
 }
+  
+  function fillContent(el, data){
+     var st = getStringConent(data); 
+     el.value(st);
+  }
+  
+  function getStringContent(data){
+     // if data is a string, just return
+     // if data is an array, getContent of each concatenated (with and if author stuff)
+     return JSON.stringify(data);
+  }
