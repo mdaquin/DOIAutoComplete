@@ -37,8 +37,7 @@ function checkDOI(){
         json: 'application/json'
     }
 }).done(function(data){
-    alert(data);
-    alert(JSON.stringify(data));
+    console.log(data);
   });
   
   // call DOI API to get JSON
