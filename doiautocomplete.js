@@ -1,14 +1,15 @@
 
-// add jquery if not there // this migt not be necessary, i.e. we could remove dependency to jQuery
-if (typeof jQuery == 'undefined') {
-  var script = document.createElement('script');
-  script.type = "text/javascript";
-  script.src = "https://code.jquery.com/jquery-3.2.1.min.js";
-  // script.integrity = "sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=";
-  script.crossorigin="anonymous" 
-  document.getElementsByTagName('head')[0].appendChild(script);
-}
+// add jquery if not there // not necessary, i.e. we could remove dependency to jQuery
+//if (typeof jQuery == 'undefined') {
+//  var script = document.createElement('script');
+//  script.type = "text/javascript";
+//  script.src = "https://code.jquery.com/jquery-3.2.1.min.js";
+//  // script.integrity = "sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=";
+//  script.crossorigin="anonymous" 
+//  document.getElementsByTagName('head')[0].appendChild(script);
+// }
 
+// show dialog
 createDialog();
 
 function createDialog(){
@@ -22,7 +23,9 @@ function createDialog(){
   document.getElementsByTagName('body')[0].appendChild(div);
 }
 
+// process DOI and auto-fill input fields
 function checkDOI(){
+  document.getElementById('DOIAC_DIALOG').style='visibility: hidden';
   // call DOI API to get JSON
   // get all inputs 
   // go through
