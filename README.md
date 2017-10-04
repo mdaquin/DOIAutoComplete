@@ -2,3 +2,8 @@
 Bookmarklet that tries to auto-complete forms with details of publications based a DOI
 
 The bookmarklet is here: [DOIAutoComplete]("javascript:(function(){document.body.appendChild(document.createElement('script')).src='...';})();")
+
+
+<a href="javascript:function my_bookmarklet()
+                {alert('Hello World');}
+                my_bookmarklet();">Hello</a>
