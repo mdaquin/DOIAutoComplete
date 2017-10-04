@@ -1,6 +1,6 @@
 
 // add jquery if not there
-if (typeof $ == 'undefined') {
+if (typeof jQuery == 'undefined') {
   var script = document.createElement('script');
   script.type = "text/javascript";
   script.src = "https://code.jquery.com/jquery-3.2.1.min.js";
