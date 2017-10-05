@@ -71,7 +71,7 @@ function match(el, attr){
   console.log(name+" - "+label);
   if (lattr==name) return true;
   if (lattr==label) return true;  
-  if (synonyms[attr])
+  if (synonyms[lattr])
     for(var i in synonyms[attr]){
       if (synonyms[attr][i]==name) return true
       if (synonyms[attr][i]==label) return true;
