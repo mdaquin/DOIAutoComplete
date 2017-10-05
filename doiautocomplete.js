@@ -59,11 +59,11 @@ var synonyms = {
 function match(el, attr){
   var name ="xxxx";
   if (el.attr("name"))
-       name = el.attr("name").toLowerCase();
-  var lattr = attr.toLowerCase();
+       name = superTrim(el.attr("name").toLowerCase());
+  var lattr = superTrim(attr.toLowerCase());
   var label = "xxxx"; 
   if (el.prev())
-      label = el.prev().text().toLowerCase();
+      label = superTrim(el.prev().text().toLowerCase());
   if (lattr==name) return true;
   if (lattr==label) return true;  
   if (synonyms[attr])
@@ -75,11 +75,15 @@ function match(el, attr){
   
   function fillContent(el, data){
      var st = getStringContent(data); 
-     el.val(st);
+     el.val(superTrim(st));
   }
   
   function getStringContent(data){
      // if data is a string, just return
      // if data is an array, getContent of each concatenated (with and if author stuff)
      return JSON.stringify(data);
+  }
+
+  function superTrim(s){
+    return s.replace(/['"]+/g, '').trim();
   }
