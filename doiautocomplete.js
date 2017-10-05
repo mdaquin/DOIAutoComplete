@@ -74,7 +74,7 @@ function match(el, attr){
 }
   
   function fillContent(el, data){
-     var st = getStringConent(data); 
+     var st = getStringContent(data); 
      el.value(st);
   }
   
