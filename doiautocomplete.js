@@ -27,7 +27,7 @@ function createDialog(){
 function checkDOI(){
   document.getElementById('DOIAC_DIALOG').style='visibility: hidden';
   var DOI = document.getElementById('DOIAC_DOI_INPUT').value;
-  alert(DOI);
+  console.log(DOI);
   // check if the https or the doi.org or the slash are already there.
   var url = 'https://doi.org/'+DOI;
   jQuery.ajax({
@@ -75,7 +75,7 @@ function match(el, attr){
   
   function fillContent(el, data){
      var st = getStringContent(data); 
-     el.value(st);
+     el.val(st);
   }
   
   function getStringContent(data){
