@@ -84,11 +84,32 @@ function match(el, attr){
   }
   
   function getStringContent(data){
-     // if data is a string, just return
-     // if data is an array, getContent of each concatenated (with and if author stuff)
+     if (isArray(data)){
+         var st = "";
+         var first = true;
+         for(var i in data){
+           // check author and put and instead
+           if (!first) st +=", ";
+           first = false;
+           st+= getStringContent(data[i]);
+         } 
+       return st;
+     } else if (isObject(data)){
+           if (data["date-time"] return data["date-time"];
+           if (data.family && data.given) return data.given+" "+data.family;
+           else return JSON.stringify(data);
+     }
      return JSON.stringify(data);
   }
 
   function superTrim(s){
     return s.replace(/['"]+/g, '').replace(/\*+/g, '').trim();
   }
+
+function isObject ( obj ) {
+   return obj && (typeof obj  === "object");
+}
+
+function isArray ( obj ) { 
+  return isObject(obj) && (obj instanceof Array);
+}
