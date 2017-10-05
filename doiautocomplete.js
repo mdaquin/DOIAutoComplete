@@ -88,14 +88,15 @@ function match(el, attr){
          var st = "";
          var first = true;
          for(var i in data){
-           // check author and put and instead
-           if (!first) st +=", ";
+           if (!first) 
+             if (data[0] && data[0].family) st +=" and ";
+             else st +=", ";
            first = false;
            st+= getStringContent(data[i]);
          } 
        return st;
      } else if (isObject(data)){
-           if (data["date-time"]) return data["date-time"];
+           if (data["date-time"]) return data["date-time"].replace(/T.*$/g,'');
            if (data.family && data.given) return data.given+" "+data.family;
            else return JSON.stringify(data);
      }
