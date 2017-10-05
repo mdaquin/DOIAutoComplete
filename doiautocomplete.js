@@ -59,11 +59,11 @@ var synonyms = {
 function match(el, attr){
   var name ="xxxx";
   if (el.attr("name"))
-       name = el.attr("name").toLowercase();
-  var lattr = attr.toLowercase();
+       name = el.attr("name").toLowerCase();
+  var lattr = attr.toLowerCase();
   var label = "xxxx"; 
   if (el.prev())
-      label = el.prev().text().toLowercase();
+      label = el.prev().text().toLowerCase();
   if (lattr==name) return true;
   if (lattr==label) return true;  
   if (synonyms[attr])
