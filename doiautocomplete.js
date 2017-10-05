@@ -72,7 +72,7 @@ function match(el, attr){
   if (lattr==name) return true;
   if (lattr==label) return true;  
   if (synonyms[lattr])
-    for(var i in synonyms[attr]){
+    for(var i in synonyms[lattr]){
       if (synonyms[attr][i]==name) return true
       if (synonyms[attr][i]==label) return true;
     }
