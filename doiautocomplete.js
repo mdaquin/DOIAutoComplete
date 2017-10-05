@@ -53,7 +53,11 @@ function checkDOI(){
 }
 
 var synonyms = {
-   author: ["authors", "author list", "authors list"]
+   author: ["authors", "author list", "authors list"], 
+   page: ["pages"],
+   doi: ["digital object identifer (doi)", "digital object identifer"],
+   "container-title": ["journal", "conference", "proccedings"],
+   created: ["date", "publication date"]
 }
 
 function match(el, attr){
