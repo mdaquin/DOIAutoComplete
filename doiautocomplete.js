@@ -56,7 +56,7 @@ var synonyms = {
    author: ["authors", "author list", "authors list"], 
    page: ["pages"],
    doi: ["digital object identifer (doi)", "digital object identifer"],
-   "container-title": ["journal", "conference", "proccedings"],
+   "container-title": ["journal", "conference", "conference name", "proceedings"],
    created: ["date", "publication date"]
 }
 
