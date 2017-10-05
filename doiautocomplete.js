@@ -95,7 +95,7 @@ function match(el, attr){
          } 
        return st;
      } else if (isObject(data)){
-           if (data["date-time"] return data["date-time"];
+           if (data["date-time"]) return data["date-time"];
            if (data.family && data.given) return data.given+" "+data.family;
            else return JSON.stringify(data);
      }
