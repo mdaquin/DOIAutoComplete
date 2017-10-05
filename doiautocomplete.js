@@ -86,5 +86,5 @@ function match(el, attr){
   }
 
   function superTrim(s){
-    return s.replace(/['"]+/g, '').trim();
+    return s.replace(/['"]+/g, '').replace(/\*+/g, '').trim();
   }
