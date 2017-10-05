@@ -53,7 +53,7 @@ function checkDOI(){
 }
 
 var synonyms = {
-   author: ["authors", "author list", "authors lists"]
+   author: ["authors", "author list", "authors list"]
 }
 
 function match(el, attr){
@@ -64,6 +64,7 @@ function match(el, attr){
   var label = "xxxx"; 
   if (el.prev())
       label = superTrim(el.prev().text().toLowerCase());
+  console.log(name+" - "+label);
   if (lattr==name) return true;
   if (lattr==label) return true;  
   if (synonyms[attr])
