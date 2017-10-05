@@ -96,7 +96,7 @@ function match(el, attr){
          } 
        return st;
      } else if (isObject(data)){
-           if (data["date-time"]) return data["date-time"].replace(/T.*$/g,'').replace(/-/g,"/");
+           if (data["date-parts"]) return data["date-parts"][0][2]+"/"+data["date-parts"][0][1]+"/"+data["date-parts"][0][0];
            if (data.family && data.given) return data.given+" "+data.family;
            else return JSON.stringify(data);
      }
