@@ -57,7 +57,8 @@ var synonyms = {
    page: ["pages"],
    doi: ["digital object identifer (doi)", "digital object identifer"],
    "container-title": ["journal", "conference", "conference name", "proceedings"],
-   created: ["date", "publication date"]
+   created: ["date", "publication date"], 
+   title: ["publication_name"]
 }
 
 function match(el, attr){
